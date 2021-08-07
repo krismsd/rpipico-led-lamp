@@ -15,6 +15,7 @@ button = Button(BUTTON_PIN)
 effectFns: list = [
     effects.ProximaPlane(ledStrip, button),
     effects.WipePlane(ledStrip, button),
+    effects.BiColor(ledStrip, button, Color.PURPLE, Color.CYAN),
     effects.BiColor(ledStrip, button, Color.GREEN, Color.PURPLE),
     effects.BiColor(ledStrip, button, Color.WHITE, Color.GREEN),
     effects.RainbowStars(ledStrip, button),

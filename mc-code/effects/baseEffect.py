@@ -23,6 +23,7 @@ class BaseEffect:
 
     def run(self) -> int:
         self.setup()
+
         while self.isInfinite:
             buttonResult = self.button.fetchCommand()
             if buttonResult != ButtonCommand.NONE:

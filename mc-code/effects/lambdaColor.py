@@ -17,8 +17,6 @@ class LambdaColor(BaseEffect):
     waitLow: int
     waitHigh: int
 
-    ledState = []
-
     def __init__(self, ledStrip: LedStripControl, button: Button, colorGetter, animationDuration: int, waitLow: int, waitHigh: int) -> None:
         super().__init__(ledStrip, button)
 
@@ -26,6 +24,7 @@ class LambdaColor(BaseEffect):
         self.animationDuration = animationDuration
         self.waitLow = waitLow
         self.waitHigh = waitHigh
+        self.ledState = []
 
     def setup(self):
         for i in range(NUM_LEDS):
